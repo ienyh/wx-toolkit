@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/weather3/weather3",
+    "pages/weather2/weather2",
+    "pages/weather/weather",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3883FA",
+    "navigationBarTitleText": "toolkit",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

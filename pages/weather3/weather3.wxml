@@ -1,0 +1,48 @@
+<view class="location">
+  <image src="/images/loca.png"></image>
+  郑州
+</view>
+
+<view class="temperature">20℃</view>
+
+<view class="info">
+  <view class="weather">多云</view>
+  <text>|</text>
+  <view class="air {{realtime.airColor}}">48 优</view>
+</view>
+
+<view class="other">
+  <text>风力 一级</text>
+  <text>风向 西风</text>
+  <text>湿度 53%</text>
+</view>
+
+<view class="future">
+  <view class="day">
+    <view class="temp">
+      <view class="textbox">
+        <text>今天</text>
+      </view>
+      <view>28/35℃</view>
+    </view>
+    <view class="weather">
+      <text>阴转多云</text>
+      <image src="/images/weather/多云.png"></image>
+    </view>
+  </view>
+  <view class="vertical-line"></view>
+  <view class="day">
+    <view class="temp">
+      <view class="textbox">
+        <text>明天</text>
+      </view>
+      <view>28/34℃</view>
+    </view>
+    <view class="weather">
+      <text>小雨</text>
+      <image src="/images/weather/小雨.png"></image>
+    </view>
+  </view>
+</view>
+
+<picker mode="region" bindchange="getWeather">beijing</picker>
