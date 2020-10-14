@@ -1,16 +1,18 @@
 {
-  "pages":[
+  "pages": [
+    "pages/calc/calc",
     "pages/weather3/weather3",
     "pages/weather2/weather2",
     "pages/weather/weather",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/calc/history/history"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3883FA",
     "navigationBarTitleText": "toolkit",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
