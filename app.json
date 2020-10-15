@@ -1,19 +1,45 @@
 {
   "pages": [
-    "pages/calc/calc",
-    "pages/weather3/weather3",
-    "pages/weather2/weather2",
-    "pages/weather/weather",
     "pages/index/index",
     "pages/logs/logs",
+
+    "pages/setting/setting",
+    "pages/tools/tools",
+    
+    "pages/weather3/weather3",
+    "pages/weather2/weather2",
+    "pages/calc/calc",
     "pages/calc/history/history"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#3883FA",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "navigationBarTitleText": "toolkit",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "index",
+      "iconPath": "/images/icons/Student.png",
+      "selectedIconPath": "images/icons/Student.png"
+    }, {
+      "pagePath": "pages/tools/tools",
+      "text": "tools",
+      "iconPath": "/images/icons/_tools.png",
+      "selectedIconPath": "/images/icons/_tools.png"
+    }, {
+      "pagePath": "pages/setting/setting",
+      "text": "setting",
+      "iconPath": "/images/icons/MobileElectronics.png",
+      "selectedIconPath": "/images/icons/MobileElectronics.png"
+    }],
+    "color": "#000000",
+    "selectedColor": "#3498DB",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF"
+  },
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

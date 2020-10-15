@@ -1,8 +1,7 @@
-
 page {
-    background-image: linear-gradient(skyblue, #fff 60%);
-  }
-  
+  background-image: linear-gradient(skyblue, #fff 60%);
+}
+
   .location image {
     width:50rpx;
     height:50rpx;

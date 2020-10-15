@@ -1,40 +1,11 @@
-// pages/weather/weather.js
+// pages/tools/tools.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        region: ["beijing", "beijing", "chaoyang"]
-    },
 
-    changeRegion: function (params) {
-        //console.log(params);
-        this.setData({
-            region: params.detail.value
-        })
-    },
-
-    getWeather: function () {
-        var that = this;
-        wx.request({
-            url: 'https://devapi.heweather.net/v7/weather/now',
-            data: {
-                location: "北京",
-                key: "711e2e6862d84ce78811845afb652338"
-            },
-            // header: {'content-type':'application/json'},
-            // method: 'GET',
-            // dataType: 'json',
-            // responseType: 'text',
-            success: (result) => {
-                console.log(result.data);
-            },
-            fail: (result) => {
-                console.log(result);
-            }
-        });
-        
     },
 
     /**
