@@ -1,13 +1,13 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/logs/logs",
 
     "pages/setting/setting",
     "pages/tools/tools",
     
-    "pages/weather3/weather3",
-    "pages/weather2/weather2",
+    "pages/weather/weather",
     "pages/calc/calc",
     "pages/calc/history/history"
   ],
@@ -21,17 +21,17 @@
     "list": [{
       "pagePath": "pages/index/index",
       "text": "index",
-      "iconPath": "/images/icons/Student.png",
+      "iconPath": "/images/icons/_Student.png",
       "selectedIconPath": "images/icons/Student.png"
     }, {
       "pagePath": "pages/tools/tools",
       "text": "tools",
-      "iconPath": "/images/icons/_tools.png",
+      "iconPath": "/images/icons/tools.png",
       "selectedIconPath": "/images/icons/_tools.png"
     }, {
       "pagePath": "pages/setting/setting",
       "text": "setting",
-      "iconPath": "/images/icons/MobileElectronics.png",
+      "iconPath": "/images/icons/_MobileElectronics.png",
       "selectedIconPath": "/images/icons/MobileElectronics.png"
     }],
     "color": "#000000",

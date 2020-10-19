@@ -1,0 +1,50 @@
+<view class="container">
+
+  <view class="location">
+    <view class="location_in">
+      <image src="../../images/weather/loca.png" mode="widthFix"/>
+      <picker mode="region" bindchange="picker_getWeather">{{cityMessage.adm2}} {{cityMessage.name}}区</picker>
+    </view>  
+  </view>
+
+  <view class="temp">
+    <text class="temp_text">{{now.temp}}℃</text>
+  </view>
+
+  <view class="icon_wind">
+    <view class="icon_wind_in">
+      <view class="text_icon">
+        <view class="text">{{now.text}}</view>
+        <image wx:if="{{now.text}}" src="https://oss.zhuhe.site/chen/{{now.text}}.png" mode="widthFix"/>
+      </view>
+      <text> | </text>
+      <view wx:if="{{now.windDir}} && {{now.windScale}}" class="text">{{now.windDir}}{{now.windScale}}级</view>
+    </view>
+  </view>
+
+  <view class="textView">
+    <text class="text_now">体感温度:{{now.feelsLike}}℃</text>
+    <!-- <text class="text_now">大气压:{{now.pressure}}百帕</text> -->
+    <text class="text_now">相对湿度:{{now.humidity}}%</text>
+  </view>
+
+  <view class="afterDay">
+    <view wx:if="{{today}}" class="oneDay">
+      <text>今天</text>
+      <text>{{today.tempMin}}/{{today.tempMax}}℃</text>
+      <view class="text_icon">
+        <text>{{today.textDay}}</text>
+        <image wx:if="{{today.textDay}}" src="https://oss.zhuhe.site/chen/{{today.textDay}}.png" mode="widthFix"/>
+      </view>
+    </view>
+
+    <view wx:if="{{tomorrow}}" class="oneDay">
+      <text>明天</text>
+      <text>{{tomorrow.tempMin}}/{{tomorrow.tempMax}}℃</text>
+      <view class="text_icon">
+        <text>{{tomorrow.textDay}}</text>
+        <image wx:if="{{tomorrow.textDay}}" src="https://oss.zhuhe.site/chen/{{tomorrow.textDay}}.png" mode="widthFix"/>
+      </view>
+    </view>
+  </view>
+</view>

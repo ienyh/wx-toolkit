@@ -12,3 +12,7 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
+pages/weather2/weather2.js
+pages/weather2/weather2.json
+pages/weather2/weather2.wxml
+pages/weather2/weather2.wxss

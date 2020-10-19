@@ -1,2 +1,1 @@
-<!--pages/setting/setting.wxml-->
-<text>pages/setting/setting.wxml</text>
+<button type="primary"  open-type="contact">contact</button>

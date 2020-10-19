@@ -1,0 +1,145 @@
+page {
+  background-image: linear-gradient(skyblue, whitesmoke 60%);
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  //background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+.location {
+  //background-color: aqua;
+  width: 100%;
+  height: 22%;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+  .location_in {
+    //background-color: cadetblue;
+    display: flex;
+    flex-direction: row;
+    /* padding: 20rpx; */
+
+    picker {
+      //background-color: blue;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    
+      font-size: large;
+      font-weight: 100;
+    }
+    
+    image {
+      width: 60rpx;
+    }
+  }
+}
+
+.temp {
+  //background-color: antiquewhite;
+  width: 100%;
+  height: 25%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  .temp_text {
+    font-size: 200rpx;
+    font-weight: 100;
+  }
+}
+
+.icon_wind {
+  //background-color: aquamarine;
+  width: 100%;
+  height: 8%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  .icon_wind_in {
+    //background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .text_icon {
+      //background-color: rgb(109, 127, 141);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      image {
+        width: 60rpx;
+      }
+    }
+  }
+}
+
+.vertical-line {
+  height: 100%;
+  border: 2rpx solid #222226;
+}
+
+.tex, .vertical-line {
+  margin: 20rpx;
+}
+
+.textView {
+  //background-color: blueviolet;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  .text_now {
+    font-size: medium;
+    font-weight: 100;
+  }
+}
+
+.afterDay {
+  //background-color: brown;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  .oneDay {
+    background-color: skyblue;
+    height: 250rpx;
+    width: 200rpx;
+    padding: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+
+    .text_icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; 
+      align-items: center;
+      image {
+        width: 60rpx;
+      }
+    }
+  }
+}
+
