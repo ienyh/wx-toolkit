@@ -10,7 +10,9 @@
     "pages/weather/weather",
     "pages/calc/calc",
     "pages/calc/history/history",
-    "pages/qrcode/qrcode"
+    "pages/qrcode/qrcode",
+    "pages/translation/translation",
+    "pages/translation/change/change"
   ],
   "window": {
     "backgroundTextStyle": "light",

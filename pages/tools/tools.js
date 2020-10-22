@@ -26,6 +26,12 @@ Page({
         })
     },
 
+    goToTranslation: function () {
+        wx.navigateTo({
+            url: '../translation/translation',
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */

@@ -82,7 +82,7 @@ Page({
     if (url === "") {
       wx.showToast({
         icon: 'none',
-        title: '请输入网址',
+        title: '请输入文本',
         duration: 2000
       });
       return;
