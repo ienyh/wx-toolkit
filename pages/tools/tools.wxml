@@ -6,7 +6,7 @@
         <image src="../../images/weather/weather_1.png" mode="widthFix" bindtap="goToWeather"/>
     </view>
     <view class="group">
-        <image src="../../images/icons/temp.png" mode="widthFix"/>
+        <image src="../../images/icons/temp.png" mode="widthFix" bindtap="goToQRCode"/>
         <image src="../../images/icons/music.png" mode="widthFix"/>
     </view>
 </view>

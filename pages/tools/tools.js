@@ -20,6 +20,12 @@ Page({
         });
     },
 
+    goToQRCode: function () {
+        wx.navigateTo({
+          url: '../qrcode/qrcode',
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */

@@ -9,7 +9,8 @@
     
     "pages/weather/weather",
     "pages/calc/calc",
-    "pages/calc/history/history"
+    "pages/calc/history/history",
+    "pages/qrcode/qrcode"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,28 +19,31 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "index",
-      "iconPath": "/images/icons/_Student.png",
-      "selectedIconPath": "images/icons/Student.png"
-    }, {
-      "pagePath": "pages/tools/tools",
-      "text": "tools",
-      "iconPath": "/images/icons/tools.png",
-      "selectedIconPath": "/images/icons/_tools.png"
-    }, {
-      "pagePath": "pages/setting/setting",
-      "text": "setting",
-      "iconPath": "/images/icons/_MobileElectronics.png",
-      "selectedIconPath": "/images/icons/MobileElectronics.png"
-    }],
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "index",
+        "iconPath": "/images/icons/_Student.png",
+        "selectedIconPath": "images/icons/Student.png"
+      },
+      {
+        "pagePath": "pages/tools/tools",
+        "text": "tools",
+        "iconPath": "/images/icons/tools.png",
+        "selectedIconPath": "/images/icons/_tools.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "setting",
+        "iconPath": "/images/icons/_MobileElectronics.png",
+        "selectedIconPath": "/images/icons/MobileElectronics.png"
+      }
+    ],
     "color": "#000000",
     "selectedColor": "#3498DB",
     "borderStyle": "black",
     "backgroundColor": "#FFFFFF"
   },
-
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
