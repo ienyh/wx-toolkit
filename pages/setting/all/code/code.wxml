@@ -1,0 +1,27 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="true">
+  <text slot="cuIcon-back" class="cuIcon-back"></text>
+  <view slot="leftBackText">返回</view>
+  <view slot="content"></view>
+</cu-custom>
+
+<view class="button_container">
+    <view>
+        <button bindtap="click_hu" class="clickHu">{{motto_hu}}</button>
+    </view>
+
+    <view>  
+        <button bindtap="click_2" class="click_users">{{motto2}}</button>
+    </view>
+
+    <view>
+        <button bindtap="click_3" class="click_users">{{motto3}}</button>
+    </view>
+
+    <view>
+        <button bindtap="click_1" class="click_users">{{motto1}}</button>
+    </view>
+
+    <view>
+        <button bindtap="click_4" class="click_users">{{motto4}}</button>
+    </view>
+</view>

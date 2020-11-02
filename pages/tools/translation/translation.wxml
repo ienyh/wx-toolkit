@@ -1,0 +1,47 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="false">
+  <text slot="cuIcon-back" class="cuIcon-back"></text>
+  <view slot="leftBackText">返回</view>
+  <!-- <view slot="content">个人</view> -->
+</cu-custom>
+
+<view class='container'>
+  <view class='to-change-page' bindtap="goToChange">
+      <text class='lang'>翻译成{{curLang.chinese}}</text>
+      <text class='iconfont icon-down'></text>
+  </view>
+
+  <view class='input-area'>
+    <view class='textarea-container'>
+      <textarea
+        placeholder='请输入要翻译的文本'
+        placeholder-style='color: #8995a1;'
+        value='{{query}}'
+        bindinput='onInput'
+        bindconfirm='onConfirm'
+      ></textarea>
+      <text class='iconfont icon-close'
+        bindtap='onTapClose'
+        hidden='{{hideCloseIcon}}'
+      ></text>
+    </view>
+  </view>
+
+  <button
+    bindtap='onConfirm'
+  >点击翻译</button>
+
+  <view class='output-area'>
+    <text class='title'>译文</text>
+    <view class='result-container'>
+      <view class='result'
+        wx:if='{{translateResult}}'
+      >{{translateResult}}</view>
+    </view>
+  </view>
+
+
+  <view class='copyright'>
+    <text>© 2019 strugglebak</text>
+  </view>
+</view>
+

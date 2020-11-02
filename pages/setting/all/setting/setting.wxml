@@ -1,0 +1,19 @@
+<!--pages/setting/setting.wxml-->
+<!-- <text>pages/setting/setting.wxml</text> -->
+
+<!-- <button open-type="launchApp" class="button_style">launchApp</button>
+<button open-type="getPhoneNumber" class="button_style">getPhoneNumber</button> -->
+
+<view class="button_container">
+    <button open-type="contact" class="button_style">contact</button>
+    <button open-type="feedback" class="button_style">feedback</button>
+</view>
+
+<view class="button_container">
+    <button open-type="openSetting" class="button_style">openSetting</button>
+    <button open-type="getUserInfo" class="button_style" bindgetuserinfo="getUserInfo">getUserInfo</button>
+</view>
+
+<view class="button_container">
+    <button open-type="share" class="button_style">share</button>
+</view>

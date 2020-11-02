@@ -1,13 +1,64 @@
-<!--pages/tools/tools.wxml-->
-<!-- <text>pages/tools/tools.wxml</text> -->
-<view class="container">
-    <view class="group">
-        <image src="../../images/icons/Accounting.png" mode="widthFix" bindtap="goToAccounting"/>
-        <image src="../../images/weather/weather_1.png" mode="widthFix" bindtap="goToWeather"/>
+
+<!-- <scroll-view class="page">
+    <view class="cu-list grid col-3 no-border">
+        <view class="cu-item">
+            <view class="cuIcon-cardboardfill text-red" bind:tap="goToAccounting"></view>
+            <text>VR</text>
+            <view class="cuIcon-recordfill text-red" bind:tap="goToWeather"></view>
+            <text>VR</text>
+            <view class="cuIcon-cardboardfill text-red" bind:tap="goToQRCode"></view>
+            <text>VR</text>
+            <view class="cuIcon-cardboardfill text-red" bind:tap="goToTranslation"></view>
+            <text>VR</text>
+        </view>
     </view>
-    <view class="group">
-        <image src="../../images/icons/temp.png" mode="widthFix" bindtap="goToQRCode"/>
-        <image src="../../images/icons/music.png" mode="widthFix" bindtap="goToTranslation"/>
-    </view>
+</scroll-view> -->
+
+<cu-custom bgColor="bg-gradual-blue" isBack="false">
+  <view slot="leftBackText">toolkit</view>
+</cu-custom>
+
+<!-- 关于我们
+<view class="cu-bar justify-left bg-white">
+  <view class="action sub-title">
+    <text class="text-xl text-bold text-blue">关于我们</text>
+    <text class="text-ABC text-blue">about</text>
+  </view>
+</view> -->
+
+<view class="cu-list menu card-menu margin-top">
+  <view class="cu-item">
+    <button class="cu-btn content" bind:tap="goToAccounting">
+      <text class="cuIcon-btn text-olive"></text>
+      <text class="text-grey">Accounting</text>
+    </button>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu margin-top">
+  <view class="cu-item">
+    <button class="cu-btn content" bind:tap="goToWeather">
+      <text class="cuIcon-btn text-olive"></text>
+      <text class="text-grey">Weather</text>
+    </button>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu margin-top">
+  <view class="cu-item">
+    <button class="cu-btn content" bind:tap="goToQRCode">
+      <text class="cuIcon-qrcode text-olive"></text>
+      <text class="text-grey">QRCode</text>
+    </button>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu margin-top">
+  <view class="cu-item">
+    <button class="cu-btn content" bind:tap="goToTranslation">
+      <text class="cuIcon-btn text-olive"></text>
+      <text class="text-grey">Translation</text>
+    </button>
+  </view>
 </view>
 

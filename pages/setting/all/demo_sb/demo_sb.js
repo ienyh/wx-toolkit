@@ -1,38 +1,39 @@
-// pages/tools/tools.js
+const app = getApp();
+var util = require("../../../../utils/util2.js");
+
 Page({
   /**
    * 页面的初始数据
    */
-  data: {},
-
-  goToAccounting: function () {
-    wx.navigateTo({
-      url: "./calc/calc",
-    });
+  data: {
+    time: new Date(),
+    time2: "",
   },
 
-  goToWeather: function () {
-    wx.navigateTo({
-      url: "./weather/weather",
-    });
-  },
-
-  goToQRCode: function () {
-    wx.navigateTo({
-      url: "./qrcode/qrcode",
-    });
-  },
-
-  goToTranslation: function () {
-    wx.navigateTo({
-      url: "./translation/translation",
-    });
+  getNowTime: function (e) {
+    var that = this;
+    var currentTime = util.formatTime(new Date());
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (options) {
+    var that = this;
+    setInterval(function () {
+      that.setData({
+        time2: util.formatTime(new Date()),
+      });
+    }, 1000);
+
+    setInterval(function () {
+      //var time = util.formatTime(new Date())
+      //为页面中time赋值
+      this.setData({
+        time: util.formatTime(new Date()),
+      });
+    }, 1000);
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

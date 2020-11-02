@@ -1,0 +1,12 @@
+/* pages/setting/setting.wxss */
+
+.button_container {
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.button_style {
+    border-radius: 50rpx;
+    border: solid black;
+}

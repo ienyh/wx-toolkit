@@ -1,42 +1,32 @@
 {
   "pages": [
-    
-    "pages/index/index",
-    "pages/logs/logs",
+    "pages/tools/tools",
+    "pages/tools/qrcode/qrcode",
+    "pages/tools/weather/weather",
+    "pages/tools/calc/calc",
+    "pages/tools/calc/history/history",
+    "pages/tools/translation/translation",
+    "pages/tools/translation/change/change",
 
     "pages/setting/setting",
-    "pages/tools/tools",
-    
-    "pages/weather/weather",
-    "pages/calc/calc",
-    "pages/calc/history/history",
-    "pages/qrcode/qrcode",
-    "pages/translation/translation",
-    "pages/translation/change/change"
+    "pages/setting/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFFFFF",
-    "navigationBarTitleText": "toolkit",
-    "navigationBarTextStyle": "black"
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
   },
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "index",
-        "iconPath": "/images/icons/_Student.png",
-        "selectedIconPath": "images/icons/Student.png"
-      },
-      {
         "pagePath": "pages/tools/tools",
-        "text": "tools",
         "iconPath": "/images/icons/tools.png",
         "selectedIconPath": "/images/icons/_tools.png"
       },
       {
         "pagePath": "pages/setting/setting",
-        "text": "setting",
         "iconPath": "/images/icons/_MobileElectronics.png",
         "selectedIconPath": "/images/icons/MobileElectronics.png"
       }

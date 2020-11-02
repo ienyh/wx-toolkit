@@ -1,0 +1,8 @@
+<!--pages/demo2/demo2.wxml-->
+<!-- <text>pages/demo2/demo2.wxml</text> -->
+
+
+<view class="image_container">
+    <view>Don't scan me</view>
+    <image src="/image/sigh_code.png" class="image_code"></image>
+</view>

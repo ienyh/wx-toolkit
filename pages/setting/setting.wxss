@@ -1,1 +1,5 @@
-/* pages/setting/setting.wxss */
+.container ._buttons {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}

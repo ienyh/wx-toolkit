@@ -1,32 +1,50 @@
-// pages/tools/tools.js
+// pages/code/code.js
 Page({
+  // click_name: function username(params) {
+  //     wx.navigateTo({
+  //         url: params,
+  //       })
+  // },
+
+  click_hu: function () {
+    wx.navigateTo({
+      url: "../demo1/demo1",
+    });
+  },
+
+  click_1: function () {
+    wx.navigateTo({
+      url: "../demo_sb/demo_sb",
+    });
+  },
+
+  click_2: function () {
+    wx.navigateTo({
+      url: "../demo_women/demo_women",
+    });
+  },
+
+  click_3: function () {
+    wx.navigateTo({
+      url: "../demo_women2/demo_women2",
+    });
+  },
+
+  click_4: function () {
+    wx.navigateTo({
+      url: "../demo_women3/demo_women3",
+    });
+  },
+
   /**
    * 页面的初始数据
    */
-  data: {},
-
-  goToAccounting: function () {
-    wx.navigateTo({
-      url: "./calc/calc",
-    });
-  },
-
-  goToWeather: function () {
-    wx.navigateTo({
-      url: "./weather/weather",
-    });
-  },
-
-  goToQRCode: function () {
-    wx.navigateTo({
-      url: "./qrcode/qrcode",
-    });
-  },
-
-  goToTranslation: function () {
-    wx.navigateTo({
-      url: "./translation/translation",
-    });
+  data: {
+    motto_hu: "wxCodeHu",
+    motto2: "wxCodeDemoLyl",
+    motto3: "wxCodeDemoLhx",
+    motto1: "wxCodeDemoJy",
+    motto4: "wxCodeDemoCqy",
   },
 
   /**
