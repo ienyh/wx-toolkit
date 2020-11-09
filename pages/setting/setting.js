@@ -35,6 +35,12 @@ Page({
     });
   },
 
+  goToBackgroundInformation: function (params) {
+    wx.navigateTo({
+      url: "/pages/setting/background-information/background-information",
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
