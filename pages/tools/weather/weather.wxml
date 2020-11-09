@@ -1,56 +1,70 @@
 <cu-custom bgColor="bg-gradual-blue" isBack="false">
   <text slot="cuIcon-back" class="cuIcon-back"></text>
   <view slot="leftBackText">返回</view>
-  <!-- <view slot="content">个人</view> -->
 </cu-custom>
 
-<view class="container">
 
-  <view class="location">
-    <view class="location_in">
-      <image src="../../../images/weather/loca.png" mode="widthFix"/>
-      <picker mode="region" bindchange="picker_getWeather">{{cityMessage.adm2}} {{cityMessage.name}}区</picker>
-    </view>  
-  </view>
 
-  <view class="temp">
-    <text class="temp_text">{{now.temp}}℃</text>
-  </view>
-
-  <view class="icon_wind">
-    <view class="icon_wind_in">
-      <view class="text_icon">
-        <view class="text">{{now.text}}</view>
-        <image wx:if="{{now.text}}" src="https://oss.zhuhe.site/chen/{{now.text}}.png" mode="widthFix"/>
-      </view>
-      <text> | </text>
-      <view wx:if="{{now.windDir}} && {{now.windScale}}" class="text">{{now.windDir}}{{now.windScale}}级</view>
-    </view>
-  </view>
-
-  <view class="textView">
-    <text class="text_now">体感温度:{{now.feelsLike}}℃</text>
-    <!-- <text class="text_now">大气压:{{now.pressure}}百帕</text> -->
-    <text class="text_now">相对湿度:{{now.humidity}}%</text>
-  </view>
-
-  <view class="afterDay">
-    <view wx:if="{{today}}" class="oneDay">
-      <text>今天</text>
-      <text>{{today.tempMin}}/{{today.tempMax}}℃</text>
-      <view class="text_icon">
-        <text>{{today.textDay}}</text>
-        <image wx:if="{{today.textDay}}" src="https://oss.zhuhe.site/chen/{{today.textDay}}.png" mode="widthFix"/>
+<view class="cu-card case">
+  <view class="cu-item shadow">
+    <view class="image">
+      <image src="../../../images/weather-back.jpg" mode="widthFix" class="wea-image" />
+      <view class="cu-bar">
+        <view class="padding-xs text-black">
+          <view class="padding-0 text-xxl">
+            <picker mode="region" bindchange="picker_getWeather">
+              <text class="cuIcon-location"></text>
+              {{cityMessage.adm2}} {{cityMessage.name}}
+            </picker>
+            <!-- <view class="text-black">{{now.temp}} ℃</view> -->
+          </view>
+        </view>
       </view>
     </view>
+  </view>
+</view>
 
-    <view wx:if="{{tomorrow}}" class="oneDay">
-      <text>明天</text>
-      <text>{{tomorrow.tempMin}}/{{tomorrow.tempMax}}℃</text>
-      <view class="text_icon">
-        <text>{{tomorrow.textDay}}</text>
-        <image wx:if="{{tomorrow.textDay}}" src="https://oss.zhuhe.site/chen/{{tomorrow.textDay}}.png" mode="widthFix"/>
-      </view>
+<view class="cu-list menu card-menu margin-top-xs">
+  <view class="cu-item justify-around">
+    <view class="text-black">{{now.temp}} ℃</view>
+    <view class="text-black">{{now.text}}</view>
+    <view class="text-black">{{now.windDir}}{{now.windScale}}级</view>
+    <view class="text-black">相对湿度:{{now.humidity}}%</view>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu margin-top-xl">
+  <view class="cu-item arrow" bind:tap="">
+    <view class="content">
+      <text class="cuIcon-time text-grey"></text>
+      <text class="text-grey">明天</text>
     </view>
+    <view class="action">
+      <text class="text-grey text-df">穿衣建议</text>
+    </view>
+  </view>
+  <view class="cu-item justify-around">
+    <view class="text-black">{{tomorrow.tempMin}} / {{tomorrow.tempMax}} ℃</view>
+    <view class="text-black">{{tomorrow.textDay}}</view>
+    <view class="text-black">{{tomorrow.windDirDay}}{{tomorrow.windScaleDay}}级</view>
+    <view class="text-black">相对湿度:{{tomorrow.humidity}}%</view>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu margin-top-xl">
+  <view class="cu-item arrow" bind:tap="">
+    <view class="content">
+      <text class="cuIcon-time text-grey"></text>
+      <text class="text-grey">后天</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-df">穿衣建议</text>
+    </view>
+  </view>
+  <view class="cu-item justify-around">
+    <view class="text-black">{{dayAfterTomorrow.tempMin}} / {{dayAfterTomorrow.tempMax}} ℃</view>
+    <view class="text-black">{{dayAfterTomorrow.textDay}}</view>
+    <view class="text-black">{{dayAfterTomorrow.windDirDay}}{{dayAfterTomorrow.windScaleDay}}级</view>
+    <view class="text-black">相对湿度:{{dayAfterTomorrow.humidity}}%</view>
   </view>
 </view>

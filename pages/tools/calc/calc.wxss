@@ -1,4 +1,4 @@
-.content {
+.calc-content {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -7,11 +7,11 @@
   font-family: "Microsoft YaHei";
   overflow-x: hidden;
 }
-.layout-top{
+.layout-top {
   width: 100%;
   margin-bottom: 30rpx;
 }
-.layout-bottom{
+.layout-bottom {
   width: 100%;
 }
 .screen {
@@ -33,7 +33,7 @@
   background-color: #fff;
 }
 .item {
-  width:25%;
+  width: 25%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -44,7 +44,7 @@
 .item:active {
   background-color: #ff0000;
 }
-.zero{
+.zero {
   width: 50%;
 }
 .orange {
@@ -53,15 +53,15 @@
   font-weight: bold;
 }
 .blue {
-  color:#d9eef7;
+  color: #d9eef7;
   background-color: #0095cd;
 }
-.iconBtn{
+.iconBtn {
   display: flex;
 }
-.icon{
- display: flex;
- align-items: center;
- width:100%;
- justify-content: center;
+.icon {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }

@@ -3,7 +3,7 @@
   <view slot="leftBackText">返回</view>
   <!-- <view slot="content">个人</view> -->
 </cu-custom>
-<view class="content">
+<view class="calc-content">
   <view class="layout-top">
     <view class="screen">
      {{screenData}}

@@ -1,11 +1,3 @@
-.me-cu-bar {
-  display: flex;
-  position: relative;
-  align-items: center;
-  min-height: 100rpx;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .switch[checked] .wx-switch-input {
   background: var(--blue) !important;
   border-color: var(--blue) !important;

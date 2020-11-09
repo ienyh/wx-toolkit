@@ -7,7 +7,6 @@
     "pages/tools/calc/history/history",
     "pages/tools/translation/translation",
     "pages/tools/translation/change/change",
-
     "pages/setting/setting",
     "pages/setting/index/index",
     "pages/setting/background-information/background-information"
