@@ -7,9 +7,21 @@ Page({
   data: {
     setting_userInfo: null,
     hasUserInfo: false,
-    canIUse: wx.canIUse("button.open-type.getUserInfo"),
   },
 
+  getUserInfo: function (event) {
+    let that = this;
+    console.log(event);
+    that.setData({
+      setting_userInfo: event.detail.userInfo,
+      hasUserInfo: true,
+    });
+  },
+
+  /**
+   * 跳转至index界面
+   * @param {*} params
+   */
   toIndex: function (params) {
     wx.navigateTo({
       url: "./index/index",
@@ -26,7 +38,7 @@ Page({
   },
 
   /**
-   * 即将删除
+   * 即将删除 跳转至all/code界面
    * @param {*} params
    */
   goToAll: function (params) {
@@ -45,10 +57,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.setData({
-    //   setting_userInfo: app.globalData.userInfo,
-    // });
-
     if (app.globalData.userInfo) {
       this.setData({
         setting_userInfo: app.globalData.userInfo,
@@ -69,7 +77,9 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {},
+  onReady: function () {
+    console.log(app.globalData.userInfo);
+  },
 
   /**
    * 生命周期函数--监听页面显示

@@ -4,12 +4,20 @@
 
   
 <view class="cu-list menu card-menu margin-top">
-  <view class="cu-item arrow">  <!--bind:tap="toIndex"-->
+  <view class="cu-item">
     <view class="cu-avatar radius margin-left" style="background-image:url({{setting_userInfo.avatarUrl}});">
       <view wx:if="{{setting_userInfo}}" class="cu-tag badge {{setting_userInfo.gender == 1 ? 'cuIcon-male bg-blue' : 'cuIcon-female bg-pink'}}"></view>
     </view>
-    <view class="content text-right">
-      <text class="text-grey">个人</text>
+    <view wx:if="{{setting_userInfo}}" class="content text-right margin-right">
+      <text class="text-grey">{{setting_userInfo.nickName}}</text>
+    </view>
+    <view class="margin-tb-sm text-center">
+      <button
+        wx:if="{{!hasUserInfo}}"
+        class="cu-btn round bg-blue shadow" 
+        open-type="getUserInfo"
+        bindgetuserinfo="getUserInfo"
+      >授权</button>
     </view>
   </view>
 </view>

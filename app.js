@@ -50,17 +50,16 @@ App({
     // 展示本地存储能力
     this.globalData.curLang =
       wx.getStorageSync("curLang") || this.globalData.langList[0];
-
     var logs = wx.getStorageSync("logs") || [];
     logs.unshift(Date.now());
     wx.setStorageSync("logs", logs);
-
     // 登录
     wx.login({
       success: (res) => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       },
     });
+
     // 获取用户信息
     wx.getSetting({
       success: (res) => {
@@ -81,7 +80,7 @@ App({
       },
     });
 
-    //  获得系统屏幕信息
+    // 获得系统屏幕信息
     wx.getSystemInfo({
       success: (e) => {
         that.globalData.StatusBar = e.statusBarHeight;
