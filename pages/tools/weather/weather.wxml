@@ -3,7 +3,12 @@
   <view slot="leftBackText">返回</view>
 </cu-custom>
 
-
+<!-- 弹框加载 -->
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+  <image src='/images/icons/loading.png' class='png' mode='aspectFit'></image>
+  <view class='blue-text'>加载中...</view>
+</view>
 
 <view class="cu-card case">
   <view class="cu-item shadow">
@@ -15,6 +20,7 @@
             <picker mode="region" bindchange="picker_getWeather">
               <text class="cuIcon-location"></text>
               {{cityMessage.adm2}} {{cityMessage.name}}
+              <text class="text-black text-df">点击切换</text>
             </picker>
             <!-- <view class="text-black">{{now.temp}} ℃</view> -->
           </view>

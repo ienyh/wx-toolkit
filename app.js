@@ -48,17 +48,18 @@ App({
   onLaunch: function () {
     let that = this;
     // 展示本地存储能力
-    this.globalData.curLang =
-      wx.getStorageSync("curLang") || this.globalData.langList[0];
-    var logs = wx.getStorageSync("logs") || [];
-    logs.unshift(Date.now());
-    wx.setStorageSync("logs", logs);
+    // this.globalData.curLang =
+    //   wx.getStorageSync("curLang") || this.globalData.langList[0];
+    // var logs = wx.getStorageSync("logs") || [];
+    // logs.unshift(Date.now());
+    // wx.setStorageSync("logs", logs);
+
     // 登录
-    wx.login({
-      success: (res) => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      },
-    });
+    // wx.login({
+    //   success: (res) => {
+    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
+    //   },
+    // });
 
     // 获取用户信息
     wx.getSetting({
@@ -74,6 +75,7 @@ App({
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res);
               }
+              // console.log(JSON.parse(res.rawData));
             },
           });
         }

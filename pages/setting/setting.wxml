@@ -13,7 +13,7 @@
     </view>
     <view class="margin-tb-sm text-center">
       <button
-        wx:if="{{!hasUserInfo}}"
+        wx:if="{{!setting_userInfo}}"
         class="cu-btn round bg-blue shadow" 
         open-type="getUserInfo"
         bindgetuserinfo="getUserInfo"

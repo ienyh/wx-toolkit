@@ -12,10 +12,16 @@ Page({
   getUserInfo: function (event) {
     let that = this;
     console.log(event);
-    that.setData({
-      setting_userInfo: event.detail.userInfo,
-      hasUserInfo: true,
-    });
+    // that.setData回调
+    that.setData(
+      {
+        setting_userInfo: event.detail.userInfo,
+        hasUserInfo: true,
+      },
+      () => {
+        app.globalData.userInfo = that.data.setting_userInfo;
+      }
+    );
   },
 
   /**
@@ -31,10 +37,6 @@ Page({
       fail: () => {},
       complete: () => {},
     });
-
-    // 获取手机与系统信息
-    // var systemInfo = wx.getSystemInfoSync();
-    // console.log(systemInfo.model + " " + systemInfo.system);
   },
 
   /**
@@ -62,7 +64,7 @@ Page({
         setting_userInfo: app.globalData.userInfo,
         hasUserInfo: true,
       });
-    } else if (this.data.canIUse) {
+    } else {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = (res) => {
@@ -78,7 +80,11 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(app.globalData.userInfo);
+    // console.log(app.globalData.userInfo);
+    this.setData({
+      setting_userInfo: app.globalData.userInfo,
+      hasUserInfo: true,
+    });
   },
 
   /**
