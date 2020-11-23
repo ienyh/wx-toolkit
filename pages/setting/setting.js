@@ -3,12 +3,132 @@ var app = getApp();
 Page({
   /**
    * 页面的初始数据
+   * password&peopleArray为待删除数据
    */
   data: {
+    CustomBar: app.globalData.CustomBar,
     setting_userInfo: null,
     hasUserInfo: false,
+    password: null,
+    peopleArray: ["jy", "cqy", "lhx", "lyl", "hjy"],
   },
 
+  /**
+   * @description 展示模态框
+   */
+  showModal() {
+    this.setData({
+      modalName: true,
+    });
+  },
+
+  /**
+   * 处理input框输入的值
+   * @param {Object} e
+   */
+  inputHandle(e) {
+    this.setData({
+      password: e.detail.value,
+    });
+  },
+
+  /**
+   * @description 关闭模态框
+   */
+  hideModal() {
+    this.setData({
+      modalName: false,
+    });
+  },
+
+  /**
+   * 处理模态框中的确认按钮
+   * 默认password: "7777"
+   */
+  handleConfirm() {
+    // wx.setStorageSync("password", "7777");
+    if ("7777" == this.data.password) {
+      this.hideModal();
+      this.showDrawer();
+      wx.setStorageSync("password", "7777");
+    }
+  },
+
+  /**
+   * 跳转至all/目录下指定页面
+   * @param {string} target
+   */
+  navigateToPage(target) {
+    wx.navigateTo({
+      url: "./all/" + target + "/" + target,
+      fail: () => {
+        console.log("navigateToFail");
+      },
+    });
+  },
+
+  /**
+   * 抽屉内点击事件
+   * @param {Object} e
+   */
+  clickInDrawer(e) {
+    // console.log(e.currentTarget.dataset.index);
+    const condition = e.currentTarget.dataset.index;
+    if (condition == 0) {
+      this.navigateToPage("delete_jy");
+    } else if (condition == 1) {
+      this.navigateToPage("delete_cqy");
+    } else if (condition == 2) {
+      this.navigateToPage("delete_lhx");
+    } else if (condition == 3) {
+      this.navigateToPage("delete_lyl");
+    } else {
+      this.navigateToPage("delete_hjy");
+    }
+  },
+
+  /**
+   * 关闭右侧抽屉
+   */
+  hideDrawer() {
+    this.setData({
+      drawer: false,
+    });
+  },
+
+  /**
+   * 展示右侧抽屉
+   */
+  showDrawer() {
+    this.setData({
+      drawer: true,
+    });
+  },
+
+  /**
+   * 根据本地缓存password判断弹出模态框还是右侧抽屉
+   * 以确保密码只需要输对一次即可
+   */
+  showModalOrDrawer: function () {
+    wx.getStorage({
+      key: "password",
+      success: (password) => {
+        if ("7777" == password.data) {
+          // this.hideModal();
+          this.showDrawer();
+          // wx.setStorageSync("password", "7777");
+        }
+      },
+      fail: () => {
+        this.showModal();
+      },
+    });
+  },
+
+  /**
+   *
+   * @param {Object} event
+   */
   getUserInfo: function (event) {
     let that = this;
     console.log(event);
@@ -40,16 +160,9 @@ Page({
   },
 
   /**
-   * 即将删除 跳转至all/code界面
-   * @param {*} params
+   * 去往BackgroundInformation页面
    */
-  goToAll: function (params) {
-    wx.navigateTo({
-      url: "/pages/setting/all/code/code",
-    });
-  },
-
-  goToBackgroundInformation: function (params) {
+  goToBackgroundInformation: function () {
     wx.navigateTo({
       url: "/pages/setting/background-information/background-information",
     });

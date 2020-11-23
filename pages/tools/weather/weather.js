@@ -12,7 +12,7 @@ Page({
   },
 
   /**
-   * picker组件绑定事件 bindchange="picker_getWeather"
+   * @description picker组件绑定事件 bindchange="picker_getWeather"
    * @param {Object} location
    * e.g. location.detail.value = ["河北省", "石家庄市", "长安区"]
    */
@@ -45,8 +45,8 @@ Page({
   },
 
   /**
-   * 获取天气信息
    * @deprecated 暂时不使用此方法
+   * @description 获取天气信息
    * @param {string} timing "now"||"3d"
    */
   getWeather: function (timing) {
@@ -77,7 +77,7 @@ Page({
   },
 
   /**
-   * 更新天气信息，方法中也会更新城市信息并写入本地缓存
+   * @description 更新天气信息，方法中也会更新城市信息并写入本地缓存
    * @param {string} _location 城市名称  e.g.金水
    * @param {string} _adm 城市所属行政区划  e.g.郑州
    */

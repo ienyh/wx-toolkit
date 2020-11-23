@@ -9,7 +9,7 @@
       <view wx:if="{{setting_userInfo}}" class="cu-tag badge {{setting_userInfo.gender == 1 ? 'cuIcon-male bg-blue' : 'cuIcon-female bg-pink'}}"></view>
     </view>
     <view wx:if="{{setting_userInfo}}" class="content text-right margin-right">
-      <text class="text-grey">{{setting_userInfo.nickName}}</text>
+      <text class="text-grey text-xl">{{setting_userInfo.nickName}}</text>
     </view>
     <view class="margin-tb-sm text-center">
       <button
@@ -22,11 +22,69 @@
   </view>
 </view>
 
+<!-- 弹出模态窗口 -->
+<view class="cu-modal {{modalName?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">测试学习</view>
+      <view class="action" bind:tap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding text-xl flex justify-start align-center">
+      <text class="margin-right-sm">input: </text>
+      <input 
+        type="text" 
+        maxlength="4" 
+        style="width: 150rpx; border: 3rpx black solid; border-radius: 8rpx;"
+        password
+        bindinput="inputHandle"
+      />
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action flex justify-end align-center">
+        <button 
+          class="cu-btn line-green text-green margin-right" 
+          bind:tap="hideModal"
+          style="width:150rpx;"
+        >取消</button>
+        <button 
+          class="cu-btn bg-green margin-left" 
+          bind:tap="handleConfirm"
+          style="width:150rpx"
+        >确定</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 右侧抽屉 -->
+<view class="cu-modal drawer-modal justify-end {{drawer?'show':''}}" bind:tap="hideDrawer">
+  <view 
+    class="cu-dialog basis-lg" 
+    catchtap 
+    style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)"
+  >
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{peopleArray}}" wx:key>
+        <view 
+          class="content" 
+          bind:tap="clickInDrawer" 
+          data-index="{{index}}"
+        >
+          <view>{{item}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 卡片 -->
 <view class="cu-list menu card-menu margin-top">
-  <view class="cu-item arrow" bind:tap="goToAll">
+  <view class="cu-item arrow" bind:tap="showModalOrDrawer">
     <view class="content">
-      <text class="cuIcon-circlefill text-grey"></text>
-      <text class="text-grey">all</text>
+      <text class="cuIcon-circlefill text-blue"></text>
+      <text class="text-grey">测试未使用</text>
     </view>
   </view>
 
@@ -42,7 +100,7 @@
 
   <view class="cu-item arrow">
     <button class="cu-btn content" open-type="contact">
-      <text class="cuIcon-service text-olive"></text>
+      <text class="cuIcon-service text-blue"></text>
       <text class="text-grey">客服</text>
     </button>
   </view>

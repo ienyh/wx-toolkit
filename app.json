@@ -9,7 +9,12 @@
     "pages/tools/translation/change/change",
     "pages/setting/setting",
     "pages/setting/index/index",
-    "pages/setting/background-information/background-information"
+    "pages/setting/background-information/background-information",
+    "pages/setting/all/delete_cqy/delete_cqy",
+    "pages/setting/all/delete_hjy/delete_hjy",
+    "pages/setting/all/delete_jy/delete_jy",
+    "pages/setting/all/delete_lhx/delete_lhx",
+    "pages/setting/all/delete_lyl/delete_lyl"
   ],
   "window": {
     "backgroundTextStyle": "light",
