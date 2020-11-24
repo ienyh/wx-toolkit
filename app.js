@@ -47,6 +47,33 @@ App({
 
   onLaunch: function () {
     let that = this;
+
+    // 首先验证版本是否支持云开发
+    if (!wx.cloud) {
+      console.error("请使用 2.2.3 或以上的基础库以使用云能力");
+    } else {
+      // 初始化云开发对象 wx.cloud
+      wx.cloud.init({
+        // env: '你的环境ID',
+        traceUser: true,
+      });
+    }
+
+    // 调用云函数
+    // wx.cloud.callFunction({
+    //   // 云函数名称
+    //   name: 'add',
+    //   // 传给云函数的参数
+    //   data: {
+    //     a: 1,
+    //     b: 2,
+    //   },
+    //   success: function(res) {
+    //     console.log(res.result.sum) // 3
+    //   },
+    //   fail: console.error
+    // })
+
     // 展示本地存储能力
     // this.globalData.curLang =
     //   wx.getStorageSync("curLang") || this.globalData.langList[0];

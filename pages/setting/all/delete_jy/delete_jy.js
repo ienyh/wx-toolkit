@@ -26,10 +26,10 @@ Page({
       });
     }, 1000);
 
-    setInterval(function () {
-      //var time = util.formatTime(new Date())
+    setInterval(() => {
+      let that = this;
       //为页面中time赋值
-      this.setData({
+      that.setData({
         time: util.formatTime(new Date()),
       });
     }, 1000);

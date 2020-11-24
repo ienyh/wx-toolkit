@@ -1,5 +1,3 @@
-// pages/demo1/demo1.js
-
 const app = getApp();
 var util = require("../../../../utils/util2.js");
 
@@ -28,10 +26,9 @@ Page({
       });
     }, 1000);
 
-    setInterval(function () {
-      //var time = util.formatTime(new Date())
+    setInterval(() => {
       //为页面中time赋值
-      this.setData({
+      that.setData({
         time: util.formatTime(new Date()),
       });
     }, 1000);

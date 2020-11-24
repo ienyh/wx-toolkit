@@ -35,7 +35,7 @@
         "packNpmRelationList": []
     },
     "compileType": "miniprogram",
-    "libVersion": "2.13.1",
+    "libVersion": "2.14.0",
     "appid": "wxd1dd541b8afcaa3b",
     "projectname": "toolkit",
     "debugOptions": {
@@ -45,6 +45,8 @@
     "isGameTourist": false,
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
+    "cloudfunctionRoot": "cloudfunctions/",
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
     "condition": {
         "search": {
             "list": []
