@@ -74,16 +74,24 @@ Page({
   clickInDrawer(e) {
     // console.log(e.currentTarget.dataset.index);
     const condition = e.currentTarget.dataset.index;
-    if (condition == 0) {
-      this.navigateToPage("delete_jy");
-    } else if (condition == 1) {
-      this.navigateToPage("delete_cqy");
-    } else if (condition == 2) {
-      this.navigateToPage("delete_lhx");
-    } else if (condition == 3) {
-      this.navigateToPage("delete_lyl");
-    } else {
-      this.navigateToPage("delete_hjy");
+    switch (condition) {
+      case 0:
+        this.navigateToPage("delete_jy");
+        break;
+      case 1:
+        this.navigateToPage("delete_cqy");
+        break;
+      case 2:
+        this.navigateToPage("delete_lhx");
+        break;
+      case 3:
+        this.navigateToPage("delete_lyl");
+        break;
+      case 4:
+        this.navigateToPage("delete_hjy");
+        break;
+      default:
+        break;
     }
   },
 

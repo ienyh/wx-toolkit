@@ -2,7 +2,6 @@
   <text slot="cuIcon-back" class="cuIcon-back"></text>
   <view slot="leftBackText">返回</view>
 </cu-custom>
-
 <view class='margin-xl bg-white padding-xl radius shadow-lg'>
   <view class='text-center margin-bottom text-lg  text-grey'>关于Tools kit</view>
   <view class='text-content'>
@@ -10,13 +9,8 @@
       该项目是团队开发的一款工具包微信小程序；
       项目是开源的，gitee项目地址为https://gitee.com/Chienny/wx-learning;
     </view>
-    <view class='margin-top-sm'>
-      开发人员为华北水利水电大学学生：
-    </view>
+    <view class='margin-top-sm'>开发人员为华北水利水电大学学生：</view>
     <view class='margin-top-zero'>陈亦航 201819926</view>
-    <view class='margin-top-zero'>朱赫 201819914</view>
-    <view class='margin-top-zero'>马英杰 201819902</view>
     <view class='margin-top-sm'>如果有好的想法欢迎在项目地址或者客服给我们留言哦，更多功能敬请期待！</view>
   </view>
-  
 </view>

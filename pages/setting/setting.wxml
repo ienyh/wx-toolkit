@@ -1,8 +1,6 @@
 <cu-custom bgColor="bg-gradual-blue" isBack="false">
   <!-- <view slot="leftBackText">更多</view> -->
 </cu-custom>
-
-  
 <view class="cu-list menu card-menu margin-top">
   <view class="cu-item">
     <view class="cu-avatar radius margin-left" style="background-image:url({{setting_userInfo.avatarUrl}});">
@@ -12,16 +10,12 @@
       <text class="text-grey text-xl">{{setting_userInfo.nickName}}</text>
     </view>
     <view class="margin-tb-sm text-center">
-      <button
-        wx:if="{{!setting_userInfo}}"
-        class="cu-btn round bg-blue shadow" 
-        open-type="getUserInfo"
-        bindgetuserinfo="getUserInfo"
-      >授权</button>
+      <button wx:if="{{!setting_userInfo}}" class="cu-btn round bg-blue shadow" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        授权
+      </button>
     </view>
   </view>
 </view>
-
 <!-- 弹出模态窗口 -->
 <view class="cu-modal {{modalName?'show':''}}">
   <view class="cu-dialog">
@@ -32,53 +26,33 @@
       </view>
     </view>
     <view class="padding text-xl flex justify-start align-center">
-      <text class="margin-right-sm">input: </text>
-      <input 
-        type="text" 
-        maxlength="4" 
-        style="width: 150rpx; border: 3rpx black solid; border-radius: 8rpx;"
-        password
-        bindinput="inputHandle"
-      />
+      <text class="margin-right-sm">input:</text>
+      <input type="text" maxlength="4" style="width: 150rpx; border: 3rpx black solid; border-radius: 8rpx;" password bindinput="inputHandle" />
     </view>
     <view class="cu-bar bg-white justify-end">
       <view class="action flex justify-end align-center">
-        <button 
-          class="cu-btn line-green text-green margin-right" 
-          bind:tap="hideModal"
-          style="width:150rpx;"
-        >取消</button>
-        <button 
-          class="cu-btn bg-green margin-left" 
-          bind:tap="handleConfirm"
-          style="width:150rpx"
-        >确定</button>
+        <button class="cu-btn line-green text-green margin-right" bind:tap="hideModal" style="width:150rpx;">
+          取消
+        </button>
+        <button class="cu-btn bg-green margin-left" bind:tap="handleConfirm" style="width:150rpx">
+          确定
+        </button>
       </view>
     </view>
   </view>
 </view>
-
 <!-- 右侧抽屉 -->
 <view class="cu-modal drawer-modal justify-end {{drawer?'show':''}}" bind:tap="hideDrawer">
-  <view 
-    class="cu-dialog basis-lg" 
-    catchtap 
-    style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)"
-  >
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
     <view class="cu-list menu text-left">
       <view class="cu-item arrow" wx:for="{{peopleArray}}" wx:key>
-        <view 
-          class="content" 
-          bind:tap="clickInDrawer" 
-          data-index="{{index}}"
-        >
+        <view class="content" bind:tap="clickInDrawer" data-index="{{index}}">
           <view>{{item}}</view>
         </view>
       </view>
     </view>
   </view>
 </view>
-
 <!-- 卡片 -->
 <view class="cu-list menu card-menu margin-top">
   <view class="cu-item arrow" bind:tap="showModalOrDrawer">
@@ -87,7 +61,6 @@
       <text class="text-grey">测试未使用</text>
     </view>
   </view>
-
   <view class="cu-item arrow" bind:tap="goToBackgroundInformation">
     <view class="content">
       <text class="cuIcon-peoplelist text-green"></text>
@@ -97,41 +70,34 @@
       <text class="text-grey text-sm">chenyh</text>
     </view> -->
   </view>
-
   <view class="cu-item arrow">
     <button class="cu-btn content" open-type="contact">
       <text class="cuIcon-service text-blue"></text>
       <text class="text-grey">客服</text>
     </button>
   </view>
-
   <view class="cu-item arrow">
     <button class="cu-btn content" open-type="feedback">
       <text class="cuIcon-edit text-green"></text>
       <text class="text-grey">反馈</text>
     </button>
   </view>
-
-  <!-- <view class="cu-item arrow">
-    <button class="cu-btn content" open-type="launchApp">
-      <text class="cuIcon-roundright text-olive"></text>
-      <text class="text-grey">授权</text>
-    </button>
-  </view> -->
-
   <view class="cu-item">
     <view class="content padding-tb-sm">
       <view>
-        <text class="cuIcon-clothesfill text-orange margin-right-xs"></text> 夜间模式</view>
+        <text class="cuIcon-clothesfill text-orange margin-right-xs"></text>
+        夜间模式
+      </view>
       <view class="text-gray text-sm">
-        <text class="cuIcon-infofill margin-right-xs"></text> 打开后进入夜间模式</view>
+        <text class="cuIcon-infofill margin-right-xs"></text>
+        打开后进入夜间模式
+      </view>
     </view>
     <view class="action">
       <switch class="switch sm" bindchange="logInfo"></switch>
     </view>
   </view>
 </view>
-
 <view class="cu-card case">
   <view class="cu-item shadow">
     <view class="image">
@@ -140,8 +106,6 @@
       <view class="cu-bar bg-shadeBottom">
         <view class="padding-xs text-white">
           <view class="padding-0 text-df">陈亦航 201819926</view>
-          <view class="padding-0 text-df">朱赫 201819914</view>
-          <view class="padding-0 text-df">马英杰 201819902</view>
         </view>
       </view>
     </view>
