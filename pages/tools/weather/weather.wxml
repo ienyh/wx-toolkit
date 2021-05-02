@@ -2,14 +2,12 @@
   <text slot="cuIcon-back" class="cuIcon-back"></text>
   <view slot="leftBackText">返回</view>
 </cu-custom>
-
 <!-- 弹框加载 -->
 <view class='cu-load load-modal' wx:if="{{loadModal}}">
   <!-- <view class='cuIcon-emojifill text-orange'></view> -->
   <image src='/images/icons/loading.png' class='png' mode='aspectFit'></image>
   <view class='blue-text'>加载中...</view>
 </view>
-
 <view class="cu-card case">
   <view class="cu-item shadow">
     <view class="image">
@@ -29,7 +27,6 @@
     </view>
   </view>
 </view>
-
 <view class="cu-list menu card-menu margin-top-xs">
   <view class="cu-item justify-around">
     <view class="text-black">{{now.temp}} ℃</view>
@@ -38,7 +35,6 @@
     <view class="text-black">相对湿度:{{now.humidity}}%</view>
   </view>
 </view>
-
 <view class="cu-list menu card-menu margin-top-xl">
   <view class="cu-item arrow" bind:tap="">
     <view class="content">
@@ -56,7 +52,6 @@
     <view class="text-black">相对湿度:{{tomorrow.humidity}}%</view>
   </view>
 </view>
-
 <view class="cu-list menu card-menu margin-top-xl">
   <view class="cu-item arrow" bind:tap="">
     <view class="content">
@@ -70,7 +65,9 @@
   <view class="cu-item justify-around">
     <view class="text-black">{{dayAfterTomorrow.tempMin}} / {{dayAfterTomorrow.tempMax}} ℃</view>
     <view class="text-black">{{dayAfterTomorrow.textDay}}</view>
-    <view class="text-black">{{dayAfterTomorrow.windDirDay}}{{dayAfterTomorrow.windScaleDay}}级</view>
+    <view class="text-black">
+      {{dayAfterTomorrow.windDirDay}}{{dayAfterTomorrow.windScaleDay}}级
+    </view>
     <view class="text-black">相对湿度:{{dayAfterTomorrow.humidity}}%</view>
   </view>
 </view>

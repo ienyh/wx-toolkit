@@ -1,5 +1,5 @@
 // pages/translation/translation.js
-import { translate } from "../../../utils/baidu-translate-api.js";
+import { translate } from "../../../utils/baidu_translate_api.js";
 
 //获取应用实例
 const app = getApp();
@@ -68,7 +68,7 @@ Page({
       from: "auto",
       to: this.data.curLang.lang,
     }).then(
-      (data) => {
+      data => {
         console.log(data);
         let history = wx.getStorageSync("history") || [];
         if (history.length) {
@@ -83,7 +83,7 @@ Page({
         console.log("resultArray", resultArray);
         let src = [];
         let dst = [];
-        resultArray.forEach((key) => {
+        resultArray.forEach(key => {
           src.push(key["src"]);
           dst.push(key["dst"]);
         });
@@ -119,7 +119,7 @@ Page({
         history.length = history.length > 10 ? 10 : history.length;
         wx.setStorageSync("history", history);
       },
-      (error) => {
+      error => {
         console.log(error);
       }
     );
