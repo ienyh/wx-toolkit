@@ -10,7 +10,7 @@ Page({
     setting_userInfo: null,
     hasUserInfo: false,
     password: null,
-    peopleArray: ["jy", "cqy", "lhx", "lyl", "hjy"],
+    peopleArray: ["test", "test", "test", "test", "test"],
   },
 
   /**
@@ -73,26 +73,7 @@ Page({
    */
   clickInDrawer(e) {
     // console.log(e.currentTarget.dataset.index);
-    const condition = e.currentTarget.dataset.index;
-    switch (condition) {
-      case 0:
-        this.navigateToPage("delete_jy");
-        break;
-      case 1:
-        this.navigateToPage("delete_cqy");
-        break;
-      case 2:
-        this.navigateToPage("delete_lhx");
-        break;
-      case 3:
-        this.navigateToPage("delete_lyl");
-        break;
-      case 4:
-        this.navigateToPage("delete_hjy");
-        break;
-      default:
-        break;
-    }
+    // const condition = e.currentTarget.dataset.index;
   },
 
   /**
